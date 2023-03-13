@@ -10,13 +10,32 @@ exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
+const cursante_module_1 = require("./models/cursante/cursante.module");
+const capacitacion_module_1 = require("./models/capacitacion/capacitacion.module");
+const cohorte_module_1 = require("./models/cohorte/cohorte.module");
+const capacitador_module_1 = require("./models/capacitador/capacitador.module");
+const disciplina_module_1 = require("./models/disciplina/disciplina.module");
+const mongoose_1 = require("@nestjs/mongoose");
+const cargo_module_1 = require("./models/cargo/cargo.module");
+const institucion_service_1 = require("./models/institucion/institucion.service");
+const designacion_module_1 = require("./models/designacion/designacion.module");
+const institucion_module_1 = require("./models/institucion/institucion.module");
+const institucion_controller_1 = require("./models/institucion/institucion.controller");
+const rol_module_1 = require("./models/rol/rol.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [],
-        controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        imports: [
+            mongoose_1.MongooseModule.forRoot('mongodb+srv://admin:Gusanito1@ciie.vvkhe1n.mongodb.net/?retryWrites=true&w=majority'),
+            cursante_module_1.CursanteModule,
+            capacitacion_module_1.CapacitacionModule,
+            cohorte_module_1.CohorteModule,
+            capacitador_module_1.CapacitadorModule,
+            disciplina_module_1.DisciplinaModule, cargo_module_1.CargoModule, institucion_module_1.InstitucionModule, designacion_module_1.DesignacionModule, rol_module_1.RolModule
+        ],
+        controllers: [app_controller_1.AppController, institucion_controller_1.InstitucionController],
+        providers: [app_service_1.AppService, institucion_service_1.InstitucionService],
     })
 ], AppModule);
 exports.AppModule = AppModule;
