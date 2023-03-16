@@ -16,7 +16,7 @@ import { RolModule } from './models/rol/rol.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://admin:Gusanito1@ciie.vvkhe1n.mongodb.net/?retryWrites=true&w=majority') ,
+    MongooseModule.forRoot('mongodb+srv://admin:Gusanito1@ciie.vvkhe1n.mongodb.net/?retryWrites=true&w=majority?directConnection=true') ,
     CursanteModule,
     CapacitacionModule, 
     CohorteModule, 

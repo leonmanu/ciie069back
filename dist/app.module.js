@@ -27,7 +27,7 @@ let AppModule = class AppModule {
 AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
-            mongoose_1.MongooseModule.forRoot('mongodb+srv://admin:Gusanito1@ciie.vvkhe1n.mongodb.net/?retryWrites=true&w=majority'),
+            mongoose_1.MongooseModule.forRoot('mongodb+srv://admin:Gusanito1@ciie.vvkhe1n.mongodb.net/?retryWrites=true&w=majority?directConnection=true'),
             cursante_module_1.CursanteModule,
             capacitacion_module_1.CapacitacionModule,
             cohorte_module_1.CohorteModule,
