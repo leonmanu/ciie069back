@@ -13,17 +13,20 @@ import { DesignacionModule } from './models/designacion/designacion.module';
 import { InstitucionModule } from './models/institucion/institucion.module';
 import { InstitucionController } from './models/institucion/institucion.controller';
 import { RolModule } from './models/rol/rol.module';
+import { AreaController } from './models/area/area.controller';
+import { AreaModule } from './models/area/area.module';
+import { AreaService } from './models/area/area.service';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://admin:Gusanito1@ciie.vvkhe1n.mongodb.net/?retryWrites=true&w=majority?directConnection=true') ,
+    MongooseModule.forRoot('mongodb+srv://admin:Gusanito1@ciie.vvkhe1n.mongodb.net/?retryWrites=true&w=majority') ,
     CursanteModule,
     CapacitacionModule, 
     CohorteModule, 
     CapacitadorModule, 
-    DisciplinaModule, CargoModule, InstitucionModule, DesignacionModule, RolModule
+    DisciplinaModule, CargoModule, InstitucionModule, DesignacionModule, RolModule, AreaModule
   ],
-  controllers: [AppController, InstitucionController],
-  providers: [AppService, InstitucionService],
+  controllers: [AppController, InstitucionController, AreaController],
+  providers: [AppService, InstitucionService, AreaService],
 })
 export class AppModule {}

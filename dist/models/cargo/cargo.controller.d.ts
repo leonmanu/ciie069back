@@ -4,4 +4,5 @@ export declare class CargoController {
     private cargoService;
     constructor(cargoService: CargoService);
     post(res: any, cargoDTO: CargoDTO): Promise<any>;
+    get(res: any): Promise<any>;
 }

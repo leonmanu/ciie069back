@@ -25,6 +25,10 @@ let CargoService = class CargoService {
         await cargo.save();
         return cargo;
     }
+    async get() {
+        const cargos = await this.cargoModel.find();
+        return cargos;
+    }
 };
 CargoService = __decorate([
     (0, common_1.Injectable)(),

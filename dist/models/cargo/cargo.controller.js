@@ -28,6 +28,14 @@ let CargoController = class CargoController {
             cargoCreado: cargo
         });
     }
+    async get(res) {
+        const cargo = await this.cargoService.get();
+        console.log(cargo);
+        return res.status(common_1.HttpStatus.OK).json({
+            message: 'recived',
+            cargoCreado: cargo
+        });
+    }
 };
 __decorate([
     (0, common_1.Post)('/crear'),
@@ -37,6 +45,13 @@ __decorate([
     __metadata("design:paramtypes", [Object, cargo_dto_1.CargoDTO]),
     __metadata("design:returntype", Promise)
 ], CargoController.prototype, "post", null);
+__decorate([
+    (0, common_1.Get)('/todos'),
+    __param(0, (0, common_1.Res)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], CargoController.prototype, "get", null);
 CargoController = __decorate([
     (0, common_1.Controller)('cargo'),
     __metadata("design:paramtypes", [cargo_service_1.CargoService])

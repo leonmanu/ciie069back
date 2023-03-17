@@ -1,0 +1,3 @@
+Cohorte: son las distintas instancias de dictado de cursos durante el año
+Se crea una nueva indicando el clave ej: 1ch23, el año y el/los mes/es involucrado/s
+Tal vez, debería haber un array que guarde las áreas involucradas porque puede ser que alguna no dicte curso en esa cohorte

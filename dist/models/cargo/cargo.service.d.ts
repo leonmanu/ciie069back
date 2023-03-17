@@ -5,4 +5,5 @@ export declare class CargoService {
     private readonly cargoModel;
     constructor(cargoModel: Model<CargoInterface>);
     post(cargoDTO: CargoDTO): Promise<CargoInterface>;
+    get(): Promise<CargoInterface[]>;
 }

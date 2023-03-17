@@ -14,4 +14,9 @@ export class CargoService {
         await cargo.save()
         return cargo
     }
+
+    async get(): Promise<CargoInterface[]>  {
+        const cargos = await this.cargoModel.find()
+        return cargos
+    }
 }
