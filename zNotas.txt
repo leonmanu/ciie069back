@@ -1,0 +1,7 @@
+Cargo: es el cargo que tiene cada capacitador
+    {capacitador, area, capacitacion[], nivel}
+
+Capacitación: es la entidad que se renueva en todas las cohorte (pueden ser repetidas)
+    {cargo, curso}
+
+Curso: será la entidad que se renueva en cada cohorte, será una combinación entre área y capacitación

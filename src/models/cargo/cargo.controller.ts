@@ -18,13 +18,9 @@ export class CargoController {
     }
 
     @Get('/todos')
-    async get(@Res() res){
+    async get(){
         const cargo = await this.cargoService.get()
-        console.log(cargo);
-        return res.status(HttpStatus.OK).json({
-            message: 'recived',
-            cargoCreado: cargo
-        })
+        return cargo
     }
 
 }

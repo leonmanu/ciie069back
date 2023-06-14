@@ -28,13 +28,9 @@ let CargoController = class CargoController {
             cargoCreado: cargo
         });
     }
-    async get(res) {
+    async get() {
         const cargo = await this.cargoService.get();
-        console.log(cargo);
-        return res.status(common_1.HttpStatus.OK).json({
-            message: 'recived',
-            cargoCreado: cargo
-        });
+        return cargo;
     }
 };
 __decorate([
@@ -47,9 +43,8 @@ __decorate([
 ], CargoController.prototype, "post", null);
 __decorate([
     (0, common_1.Get)('/todos'),
-    __param(0, (0, common_1.Res)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], CargoController.prototype, "get", null);
 CargoController = __decorate([
