@@ -25,17 +25,24 @@ const rol_module_1 = require("./models/rol/rol.module");
 const area_controller_1 = require("./models/area/area.controller");
 const area_module_1 = require("./models/area/area.module");
 const area_service_1 = require("./models/area/area.service");
+const config_1 = require("@nestjs/config");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
-            mongoose_1.MongooseModule.forRoot('mongodb+srv://admin:Gusanito1@ciie.vvkhe1n.mongodb.net/?retryWrites=true&w=majority'),
+            config_1.ConfigModule.forRoot(),
+            mongoose_1.MongooseModule.forRoot(`${process.env.MONGODB_URI}`),
             cursante_module_1.CursanteModule,
             capacitacion_module_1.CapacitacionModule,
             cohorte_module_1.CohorteModule,
             capacitador_module_1.CapacitadorModule,
-            disciplina_module_1.DisciplinaModule, cargo_module_1.CargoModule, institucion_module_1.InstitucionModule, designacion_module_1.DesignacionModule, rol_module_1.RolModule, area_module_1.AreaModule
+            disciplina_module_1.DisciplinaModule,
+            cargo_module_1.CargoModule,
+            institucion_module_1.InstitucionModule,
+            designacion_module_1.DesignacionModule,
+            rol_module_1.RolModule,
+            area_module_1.AreaModule
         ],
         controllers: [app_controller_1.AppController, institucion_controller_1.InstitucionController, area_controller_1.AreaController],
         providers: [app_service_1.AppService, institucion_service_1.InstitucionService, area_service_1.AreaService],

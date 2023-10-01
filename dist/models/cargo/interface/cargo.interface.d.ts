@@ -6,5 +6,5 @@ export interface CargoInterface extends Document {
     readonly area: string;
     readonly cargaHoraria: number;
     readonly institucion: string;
-    readonly designacion: [string];
+    readonly designacion?: [string];
 }

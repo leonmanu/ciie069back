@@ -16,15 +16,22 @@ import { RolModule } from './models/rol/rol.module';
 import { AreaController } from './models/area/area.controller';
 import { AreaModule } from './models/area/area.module';
 import { AreaService } from './models/area/area.service';
+import { ConfigModule } from "@nestjs/config";
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://admin:Gusanito1@ciie.vvkhe1n.mongodb.net/?retryWrites=true&w=majority') ,
+    ConfigModule.forRoot(),
+    MongooseModule.forRoot(`${process.env.MONGODB_URI}`) ,
     CursanteModule,
     CapacitacionModule, 
     CohorteModule, 
     CapacitadorModule, 
-    DisciplinaModule, CargoModule, InstitucionModule, DesignacionModule, RolModule, AreaModule
+    DisciplinaModule,
+    CargoModule,
+    InstitucionModule,
+    DesignacionModule,
+    RolModule,
+    AreaModule
   ],
   controllers: [AppController, InstitucionController, AreaController],
   providers: [AppService, InstitucionService, AreaService],
