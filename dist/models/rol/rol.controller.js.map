@@ -1,1 +1,1 @@
-{"version":3,"file":"rol.controller.js","sourceRoot":"","sources":["../../../src/models/rol/rol.controller.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAA4C;AAG5C,IAAa,aAAa,GAA1B,MAAa,aAAa;CAAG,CAAA;AAAhB,aAAa;IADzB,IAAA,mBAAU,EAAC,KAAK,CAAC;GACL,aAAa,CAAG;AAAhB,sCAAa"}
+{"version":3,"file":"rol.controller.js","sourceRoot":"","sources":["../../../src/models/rol/rol.controller.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAA4C;AAGrC,IAAM,aAAa,GAAnB,MAAM,aAAa;CAAG,CAAA;AAAhB,aAAa;IADzB,IAAA,mBAAU,EAAC,KAAK,CAAC;GACL,aAAa,CAAG;AAAhB,sCAAa"}
