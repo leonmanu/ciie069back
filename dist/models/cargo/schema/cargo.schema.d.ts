@@ -24,12 +24,12 @@
 /// <reference types="mongoose/types/inferschematype" />
 import { Schema } from "mongoose";
 export declare const CargoSchema: Schema<any, import("mongoose").Model<any, any, any, any, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, {
+    clave: string;
+    designacion: string[];
     createAt: Date;
-    designacion: import("mongoose").Types.ObjectId[];
-    area?: import("mongoose").Types.ObjectId;
-    clave?: string;
     cupof?: string;
-    rol?: import("mongoose").Types.ObjectId;
     cargaHoraria?: number;
+    rol?: import("mongoose").Types.ObjectId;
+    area?: import("mongoose").Types.ObjectId;
     institucion?: import("mongoose").Types.ObjectId;
 }>;

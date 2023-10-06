@@ -5,5 +5,5 @@ export class CargoDTO {
     readonly area: string
     readonly cargaHoraria: number
     readonly institucion: string
-    readonly designacion: [string]
+    readonly designacion?: [string]
 }

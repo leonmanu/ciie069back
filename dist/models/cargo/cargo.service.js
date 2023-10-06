@@ -20,14 +20,29 @@ let CargoService = class CargoService {
     constructor(cargoModel) {
         this.cargoModel = cargoModel;
     }
-    async post(cargoDTO) {
+    async create(cargoDTO) {
         const cargo = new this.cargoModel(cargoDTO);
         await cargo.save();
         return cargo;
     }
-    async get() {
+    async findAll() {
         const cargos = await this.cargoModel.find();
         return cargos;
+    }
+    async findOneId(id) {
+        const cargo = await this.cargoModel.findById(id);
+        return cargo;
+    }
+    async findOneClave(clave) {
+        const cargo = await this.cargoModel.findOne({ clave: clave });
+        return cargo;
+    }
+    async delete(id) {
+        await this.cargoModel.findByIdAndDelete(id);
+    }
+    async update(id, cargoDTO) {
+        const cargo = await this.cargoModel.findByIdAndUpdate(id, cargoDTO, { new: true });
+        return cargo;
     }
 };
 CargoService = __decorate([
